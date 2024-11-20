@@ -1,0 +1,25 @@
+body {
+    background-color:black;
+}
+
+.banner {
+    width: 350px;
+    height: 350px;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color:goldenrod;
+    color:black;
+    border-color: darkgoldenrod;
+    border-radius: 10px;
+    display: block;
+    width: 80px;
+    margin: 10px auto 15px auto;
+    padding: 2px;
+    text-decoration: none;
+    text-align: center;
+}
