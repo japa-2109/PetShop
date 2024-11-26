@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: rgb(255, 253, 243);
+}
+
+header {
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color:goldenrod;
+    color:black;
+    border-color: darkgoldenrod;
+    border-radius: 10px;
+    display:flexbox;
+    width: 80px;
+    margin: 10px auto 15px auto;
+    padding: 2px;
+    text-decoration: none;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #007acc;
+    text-align: center;
+    padding: 20px;
+}
+
+.name {
+    font-style: italic;
+    text-align:end;
+}
+
+.foto {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    margin-right: 5px;
+    justify-content: center;
+}
+
+
+blockquote {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    background: #f2f4f7;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.comentario {
+    background-color: goldenrod;
+}
+
+.enviar {
+    background-color:rgb(9, 186, 209);
+    color:black;
+    border-color: #007acc;
+    border-radius: 10px;
+    width: 80px;
+    margin: 5px auto 15px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color:dodgerblue;
+    text-align:center;
+}
