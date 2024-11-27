@@ -6,35 +6,65 @@ body {
     background-color: rgb(255, 253, 243);
 }
 
-header {
+header{
+    justify-content: center;
     background-color: #3e9470;
-    color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+}
+
+.fundo{
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 button {
     background-color:goldenrod;
     color:black;
     border-color: darkgoldenrod;
-    border-radius: 10px;
-    display:flexbox;
-    width: 80px;
-    margin: 10px auto 15px auto;
-    padding: 2px;
+    border-radius: 50px;
+    display: flexbox;
+    width: 200px;
+    margin: 80px 15px;
+    padding: 10px;
     text-decoration: none;
     text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-section {
+button:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: justify;
+    max-width: 700px;
+}
+
+article {
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 700px;
+}
+
+.depoimentos {
+    margin-bottom: 20px;
 }
 
 h2 {
-    color: #007acc;
     text-align: center;
-    padding: 20px;
+    color: #3e9470;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    margin: 50px;
 }
 
 .name {
@@ -67,9 +97,8 @@ blockquote {
 }
 
 .enviar {
-    background-color:rgb(9, 186, 209);
     color:black;
-    border-color: #007acc;
+    border-color: darkgoldenrod;
     border-radius: 10px;
     width: 80px;
     margin: 5px auto 15px auto;
@@ -77,10 +106,38 @@ blockquote {
     text-align: center;
 }
 
-footer {
+.section {
     width: 100%;
-    padding: 10px;
-    background-color: black;
-    color:dodgerblue;
+    background-color: #3e9470;
+    color:white;
+    justify-content: space-around;
+    display: flex;
+}
+
+.info1, .info2 {
+    grid-template-columns: auto;
+    text-align: center;
+}
+
+h4 {
+    color: #f9b217;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1em;
     text-align:center;
+}
+
+footer {
+    background-color: #0a1a2a;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    color: #3e9470
 }
