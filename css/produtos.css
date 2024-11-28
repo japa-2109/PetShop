@@ -166,4 +166,21 @@ footer p {
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info1,
+    .info2 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 
