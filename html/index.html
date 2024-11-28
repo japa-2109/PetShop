@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    
+
     <header>
-        </div>
+
         <img class="banner" src="../image/petshop.jpeg" alt="banner">
 
-        <nav></nav>
+        <nav>
             <button>Sobre nós</button>
             <button>Cadastro</button>
             <button>Produtos</button>
+            <button id="cart-button">Carrinho (<span id="cart-count">0</span>)</button>
         </nav>
+
     </header>
-    
+
     <section>
         <img src="../image/fundo1.jpeg" class="fundo">
 
         <div class="alinhamento">
-            <div  class="card">
+            <div class="card">
                 <img src="../image/icons/pagamento.png">
                 <span>Diversos meios de pagamento</span>
             </div>
-            
-            <div  class="card">
+
+            <div class="card">
                 <img src="../image/icons/protecao.png">
-                <span>Pague com segurança</span>  
+                <span>Pague com segurança</span>
             </div>
-            
-            <div  class="card">
+
+            <div class="card">
                 <img src="../image/icons/substituicao.png">
                 <span>Política de trocas</span>
             </div>
-            
-            <div  class="card">
+
+            <div class="card">
                 <img src="../image/icons/entrega-rapida.png">
                 <span>Entrega rápida e segura</span>
             </div>
@@ -46,52 +50,61 @@
 
         <div class="alinhamento2">
 
-        <h2>PRODUTOS</h2>
+            <h2>PRODUTOS</h2>
 
-        <div class="carousel">
-            <div class="carousel-track-wrapper">
-              <div class="carousel-track">
-                <div class="carousel-item">
-                  <img src="../image/produto1.jfif" alt="Imagem">
+            <div class="itens">
+
+                <div class="produtos">
+                    <div class="produto-item">
+                        <img src="../image/produto1.jfif" alt="Imagem" class="prod1" data-name="Produto 1"
+                            data-price="39,90">
+                        <p>Guia para coleira - R$ 39,90</p>
+                    </div>
+                    <div class="produto-item">a
+                        <img src="../image/produto2.jfif" alt="Imagem" class="pro2" data-name="Produto 2"
+                            data-price="49,50">
+                        <p>Biscoito - R$ 49,50</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="../image/produto3.jfif" alt="Imagem" class="prod3" data-name="Produto 3"
+                            data-price="19,00">
+                        <p>Bolinhas para treino - R$ 19,00</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="../image/produto4.jpg" alt="Imagem" class="prod4" data-name="Produto 4"
+                            data-price="199,99">
+                        <p>Chaveiro GPS - R$ 199,99</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="../image/produto2.jfif" alt="Imagem">
-                </div>
-                <div class="carousel-item">
-                  <img src="../image/produto3.jfif" alt="Imagem">
-                </div>
-                <div class="carousel-item">
-                  <img src="../image/produto4.jpg" alt="Imagem">
-                </div>
-              </div>
+
             </div>
-          </div>
 
-        <button>Saiba mais</button>
+            <button>Saiba mais</button>
         </div>
 
-    </section>   
+    </section>
 </body>
 
-    <section class="section">
-        <div class="info1">
-            <h4 class="contatos">Nossos Contatos</h4>			
-            <div class="endereço">
-                <p>Endereço: &nbsp; Rua da Alecrins, 250 - Jardins, São Paulo - SP</p>
-                <p>Tel Fixo: (12) 3937-6837<br>Whatsapp: (12) 99800-9090</p>
-            </div>
-        </div>		
-
+<section class="section">
+    <div class="info1">
+        <h4 class="contatos">Nossos Contatos</h4>
+        <div class="endereço">
+            <p>Endereço: &nbsp; Rua da Alecrins, 250 - Jardins, São Paulo - SP</p>
+            <p>Tel Fixo: (12) 3937-6837<br>Whatsapp: (12) 99800-9090</p>
         </div>
-            <div class="info2">
-                    <h4 class="Funcionamento">Horário de Funcionamento</h4>			
-            <div class="horarios">
-                    <p>Segunda a Sexta&nbsp; &nbsp;8hs às 18:30 hs</p>
-                    <p>Sábado:&nbsp; &nbsp; 8:00 - 12:30 hs<br>
-                    <p>Domingo:&nbsp; &nbsp;Fechado</p>
-    </section>
+    </div>
+
+    </div>
+    <div class="info2">
+        <h4 class="Funcionamento">Horário de Funcionamento</h4>
+        <div class="horarios">
+            <p>Segunda a Sexta&nbsp; &nbsp;8hs às 18:30 hs</p>
+            <p>Sábado:&nbsp; &nbsp; 8:00 - 12:30 hs<br>
+            <p>Domingo:&nbsp; &nbsp;Fechado</p>
+</section>
 
 <footer>
-    <p>&copy; 2024 Mundo Petz. Todos os direitos reservados. Site desenvolvido curso Frontend - SENAI - SJC/SP</p>
+    <p>&copy; 2024 Mundo Pet. Todos os direitos reservados. Site desenvolvido no curso Frontend - SENAI - SJC/SP</p>
 </footer>
+
 </html>
