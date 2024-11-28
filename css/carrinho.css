@@ -112,7 +112,7 @@ p {
     text-align: center;
 }
 
-/* Rodapé */
+
 footer {
     background-color: #0a1a2a;
     text-align: center;
@@ -125,7 +125,7 @@ footer p {
     color: #3e9470
 }
 
-/* Links sociais */
+
 .social-icons {
     margin-top: 10px;
 }
@@ -136,7 +136,7 @@ footer p {
     margin-right: 10px;
 }
 
-/* Adicionando responsividade */
+
 @media (max-width: 768px) {
     section {
         flex-direction: column;
