@@ -139,3 +139,21 @@ footer p {
     margin: 0;
     color: #3e9470
 }
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info1,
+    .info2 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
