@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-</head>
-<body>
+    <link rel="stylesheet" href="../css/cadastro.css">
 
-    <form action="cadastro">
-        <fieldset>
-            <legend>
-                Dados pessoais
-            </legend>
+</head>
+
+<body>
+    <img src="../image/fundo1.jpeg" class="fundo">
+
+    <div class="container">
+        <img src="../image/logo.jpeg" class="logo">
+        <h2>Dados pessoais</h2>
+
+        <form action="cadastro" class="forms">
 
             <label>Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br><br>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br>
 
             <label>Sobrenome:</label>
-            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite sobrenome" required><br><br>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite sobrenome" required><br>
 
             <label>Idade:</label>
-            <input type="number" id="idade" name="idade" placeholder="Digite idade" required><br><br>
+            <input type="number" id="idade" name="idade" placeholder="Idade" required min="18" max="150"><br>
 
-            <label>Sexo:</label>
-            <section type="text" id="sexo" name="sexo" placeholder="Selecione seu sexo" required><br><br>
-                <select id="mas" name="masculino">Masculino</select>
-                <select id="fem" name="feminino">Feminino</select>
-                <select id="todes" name="todes">Outro</select>
+            <label for="sexo" class="sx">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="todes">Todes</option>
+            </select><br>
 
-            <label>CPF/RG:</label>
-            <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF ou RG" required><br><br>
-
+            <label>Documento:</label>
+            <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF ou RG" required><br>
 
             <label>E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
-
+            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required><br>
 
             <label>Telefone:</label>
-            <input type="text" id="tel" name="telefone" placeholder="Digite seu e-mail" required><br><br>
+            <input type="text" id="tel" name="telefone" placeholder="Digite seu telefone" required><br>
 
             <ladel>Endereço:</ladel>
+            <input type="text" id="end" name="endereco" placeholder="Digite seu endereço" required><br>
 
             <label>Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required><br>
 
             <label>Estado:</label>
+            <input type="text" id="est" name="estado" placeholder="Digite seu Estado" required><br>
 
-        </fieldset>
+            <button type="submit" class="enviar">Enviar</button>
 
-        <a href="">Enviar</a href=""> 
-
-    </form>
-    
+        </form>
+    </div>
 </body>
+
 </html>
