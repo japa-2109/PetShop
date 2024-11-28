@@ -1,26 +1,25 @@
-/* Fundo */
 body {
     margin: 0;
     padding: 0;
     background-color: #f1f1ee;
 }
 
-.fundo{
+.fundo {
     width: 100%;
     position: absolute;
     right: 0px;
     left: 0px;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
-header{
+header {
     justify-content: center;
     background-color: #3e9470;
     padding: 10px;
     text-align: center;
 }
-/* Banners */
+
 .banner {
 
     width: 100%;
@@ -30,28 +29,30 @@ header{
 h2 {
     text-align: center;
     color: #3e9470;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3em;
     margin: 50px;
 }
 
-/* Cards Informativos */
 .card {
     display: inline-flex;
     width: 150px;
     height: 50px;
     background: #e2e2e2;
-    padding: 15px 15px 15px 12px;
-    margin: 20px 140px;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid;
+    box-shadow: 2px 2px 20px 5px #3e9470;
+    margin: 50px 140px;
     border-radius: 10px;
-    justify-content: center;
+    text-align: center;
+    font-size: 110%;
+
 }
 
-/* Botões navegadores*/
 button {
-    background-color:goldenrod;
-    color:black;
-    border-color: darkgoldenrod;
+    background-color: rgb(255, 200, 60);
+    color: black;
+    border-color: rgb(241, 183, 35);
     border-radius: 50px;
     display: flexbox;
     width: 200px;
@@ -59,88 +60,64 @@ button {
     padding: 10px;
     text-decoration: none;
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
     cursor: pointer;
 }
 
 button:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.8s ease-in-out; /* Suaviza o movimento do carrossel */
-    
+button:active {
+    background-color: darkgoldenrod;
 }
-  
-.carousel-item {
-    flex: 100%; /* Cada item ocupa 100% da largura visível */
+
+.produtos {
+    display: flex;
+}
+
+.produto-item {
+    flex: 100%;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f1f1ee;
-    box-shadow: 8px 8px 20px black;
-  }
-  
-.carousel-item img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-color: #63cca0;
+    box-shadow: 8px 8px 20px rgb(81, 87, 84);
+    margin: 20px;
+    border-radius: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.produto-item img {
     width: 60%;
     border-radius: 8px;
     cursor: pointer;
-  }
-  
-.carousel-item:hover {
-    transform: scale(1.1); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Destaque com sombra */
 }
 
-  
-  /* .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(5, 197, 255, 0.363);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 5px 20px;
-  }
-  
-  button.prev {
-    left: 10px 
-  }
-  
-  button.next {
-    right: 10px;
-  } */
+.produto-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 /* produtos */
-.alinhamento2{
+.alinhamento2 {
     justify-items: center;
 }
 
-.produto {
-    display: inline-flex;
-    width: 150px;
-    height: 150px;
-    background: #ffffff;
-    padding: 17px 17px 17px 12px;
-    margin: 20px 12px;
-    border-radius: 10px;
-    justify-items: center;
-    animation: slide 30s linear infinite
-}
 
 /* Informações */
 .section {
     width: 100%;
     background-color: #3e9470;
-    color:white;
+    color: white;
     justify-content: space-around;
     display: flex;
 }
 
-.info1, .info2 {
+.info1,
+.info2 {
     grid-template-columns: auto;
     text-align: center;
 }
@@ -153,7 +130,7 @@ h4 {
 
 p {
     font-size: 1em;
-    text-align:center;
+    text-align: center;
 }
 
 /* Rodapé */
@@ -169,17 +146,6 @@ footer p {
     color: #3e9470
 }
 
-/* Links sociais */
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
 /* Adicionando responsividade */
 @media (max-width: 768px) {
     section {
@@ -187,7 +153,8 @@ footer p {
         padding: 20px;
     }
 
-    .info1, .info2 {
+    .info1,
+    .info2 {
         margin-right: 0;
         margin-bottom: 20px;
     }
