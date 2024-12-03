@@ -16,30 +16,35 @@ header {
     margin: 10px 10px 10px 150px;
 }
 
-.fundo {
+/* .fundo {
     width: 100%;
     position: absolute;
     right: 0px;
     left: 0px;
     z-index: -1;
     opacity: 0.1;
+} */
+
+.name {
+    text-align: center;
 }
 
 button,
 .enviar {
-    background-color: rgb(255, 200, 60);
-    color: black;
-    border-color: rgb(241, 183, 35);
-    border-radius: 50px;
-    width: 200px;
-    margin: 50px 15px;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5em;
-    cursor: pointer;
-}
+        background-color: rgb(255, 200, 60);
+        color: black;
+        border-color: rgb(241, 183, 35);
+        border-radius: 50px;
+        width: 200px;
+        margin: 30px 15px 30px;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
 
 button a {
     text-decoration: none;
@@ -71,12 +76,24 @@ button:active {
     text-align: center;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    font-size: 1.5em;
+
+}
+
+.dig {
+    width: 50%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 textarea {
-    width: 80%;
+    width: 100%;
     border-radius: 8px;
-    height: 100px;
+    height: 200px;
     resize: vertical;
     text-align: center;
 
@@ -86,8 +103,9 @@ h2 {
     text-align: center;
     color: #3e9470;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     margin: 50px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 blockquote {
@@ -114,6 +132,7 @@ blockquote {
     color: white;
     justify-content: space-around;
     display: flex;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .info1,
@@ -126,6 +145,7 @@ h4 {
     color: #f9b217;
     font-size: 1.5em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 p {
@@ -145,20 +165,32 @@ footer p {
     color: #3e9470
 }
 
-@media (max-width: 768px) {
-    section {
+@media (max-width: 320px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+        margin: 10px;
+        gap: 10px;
+    }
+
+    button, .enviar {
+        width: 90%; /* Botões ocupam quase toda a largura */
+    }
+
+    .item1, .item2, .item3, .item4, .item5 {
+        max-width: 100%; /* Ajusta largura máxima */
+    }
+
+    .foto {
+        width: 100%;
+    }
+
+    .section {
         flex-direction: column;
-        padding: 20px;
-    }
-
-    .info1,
-    .info2 {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .button {
-        margin-right: 0;
-        margin-bottom: 20px;
+        padding: 15px;
+        text-align: center;
     }
 }
