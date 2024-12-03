@@ -37,7 +37,7 @@ h2 {
 
 }
 
-.alinhamento{
+.alinhamento {
     display: flex;
     justify-content: space-evenly;
     padding: 80px 0px;
@@ -53,7 +53,7 @@ h2 {
     box-shadow: 2px 0px 20px 5px #838282;
     border-radius: 10px;
     text-align: center;
-    justify-content:space-around
+    justify-content: space-around
 }
 
 

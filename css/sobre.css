@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f3f3d2;
 }
 
 header {
@@ -31,19 +32,19 @@ header {
 
 button,
 .enviar {
-        background-color: rgb(255, 200, 60);
-        color: black;
-        border-color: rgb(241, 183, 35);
-        border-radius: 50px;
-        width: 200px;
-        margin: 30px 15px 30px;
-        padding: 10px;
-        text-decoration: none;
-        text-align: center;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 1.5em;
-        cursor: pointer;
-    }
+    background-color: rgb(255, 200, 60);
+    color: black;
+    border-color: rgb(241, 183, 35);
+    border-radius: 50px;
+    width: 200px;
+    margin: 30px 15px 30px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    cursor: pointer;
+}
 
 
 button a {
@@ -171,17 +172,22 @@ footer p {
     }
 
     .grid {
-        grid-template-columns: 1fr; /* Uma coluna */
+        grid-template-columns: 1fr;
         margin: 10px;
         gap: 10px;
     }
 
-    button, .enviar {
-        width: 90%; /* Botões ocupam quase toda a largura */
+    button,
+    .enviar {
+        width: 90%;
     }
 
-    .item1, .item2, .item3, .item4, .item5 {
-        max-width: 100%; /* Ajusta largura máxima */
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+        max-width: 100%;
     }
 
     .foto {

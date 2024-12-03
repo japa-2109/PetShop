@@ -190,13 +190,13 @@ footer p {
 
     button {
         width: 5%;
-        /* Botões ocupam quase toda a largura */
+
         font-size: 1.1em;
     }
 
     #carrinho {
         max-width: 90%;
-        /* Carrinho ocupa quase toda a tela */
+
         padding: 10px;
     }
 
@@ -209,7 +209,7 @@ footer p {
         flex-wrap: wrap;
     }
 
-    /* Para telas médias (768px) */
+
     @media (max-width: 768px) {
         h2 {
             font-size: 2.2em;
@@ -253,7 +253,7 @@ footer p {
         }
     }
 
-    /* Para telas grandes (1024px) */
+
     @media (max-width: 1024px) {
         h2 {
             font-size: 2.5em;
