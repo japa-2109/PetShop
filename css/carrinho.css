@@ -1,17 +1,19 @@
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f1f1ee;
+    background-color: #f3f3d2;
+    font-family: Arial, sans-serif;
 }
 
-.fundo {
+/* .fundo {
     width: 100%;
     position: absolute;
-    right: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
     opacity: 0.1;
-}
+} */
 
 header {
     justify-content: center;
@@ -21,9 +23,9 @@ header {
 }
 
 .banner {
-
     width: 100%;
     height: 450px;
+    object-fit: cover;
 }
 
 h2 {
@@ -32,6 +34,7 @@ h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3em;
     margin: 50px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 button {
@@ -39,15 +42,24 @@ button {
     color: black;
     border-color: rgb(241, 183, 35);
     border-radius: 50px;
-    display: flexbox;
+    display: inline-block;
     width: 200px;
-    margin: 80px 15px;
-    padding: 10px;
+    margin: 20px;
+    padding: 15px;
     text-decoration: none;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: darkgoldenrod;
 }
 
 button a {
@@ -55,42 +67,70 @@ button a {
     color: inherit;
 }
 
-button:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-button:active {
-    background-color: darkgoldenrod;
-}
-
-
-/* .produto-item {
+#carrinho {
+    max-width: 800px;
+    margin: 30px auto;
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-}
-
-.produto-item img {
-    width: 100%;
-    height: auto;
-}
-
-#car {
     padding: 20px;
-    border-top: 2px solid #000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#car-items {
-    margin-bottom: 20px;
+ul#lista-carrinho {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#car-items p {
-    margin: 5px 0;
-} */
+ul#lista-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#lista-carrinho li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#total {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    color: #3e9470;
+}
+
+#botoes-carrinho {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#botoes-carrinho button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #3e9470;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#botoes-carrinho button:hover {
+    background-color: #33855c;
+}
 
 .section {
     width: 100%;
@@ -98,6 +138,7 @@ button:active {
     color: white;
     justify-content: space-around;
     display: flex;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .info1,
@@ -110,6 +151,7 @@ h4 {
     color: #f9b217;
     font-size: 1.5em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 p {
@@ -130,31 +172,129 @@ footer p {
     color: #3e9470
 }
 
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-
-@media (max-width: 768px) {
-    section {
-        flex-direction: column;
-        padding: 20px;
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
     }
 
-    .info1,
-    .info2 {
-        margin-right: 0;
-        margin-bottom: 20px;
+    h2 {
+        font-size: 1.8em;
+        margin: 20px;
     }
 
-    .button {
-        margin-right: 0;
-        margin-bottom: 20px;
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 5%;
+        /* Botões ocupam quase toda a largura */
+        font-size: 1.1em;
+    }
+
+    #carrinho {
+        max-width: 90%;
+        /* Carrinho ocupa quase toda a tela */
+        padding: 10px;
+    }
+
+    ul#lista-carrinho li {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #botoes-carrinho {
+        flex-wrap: wrap;
+    }
+
+    /* Para telas médias (768px) */
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 2.2em;
+            margin: 30px;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+
+        button {
+            width: 80%;
+            font-size: 1.3em;
+        }
+
+        #carrinho {
+            max-width: 90%;
+            padding: 15px;
+        }
+
+        ul#lista-carrinho li {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        ul#lista-carrinho li img {
+            width: 70px;
+            height: 70px;
+        }
+
+        #botoes-carrinho {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .section {
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+
+    /* Para telas grandes (1024px) */
+    @media (max-width: 1024px) {
+        h2 {
+            font-size: 2.5em;
+            margin: 40px;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+
+        button {
+            width: 200px;
+            font-size: 1.4em;
+        }
+
+        #carrinho {
+            max-width: 80%;
+            padding: 20px;
+        }
+
+        ul#lista-carrinho li {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        ul#lista-carrinho li img {
+            width: 80px;
+            height: 80px;
+        }
+
+        #botoes-carrinho {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 30px;
+        }
     }
 }
