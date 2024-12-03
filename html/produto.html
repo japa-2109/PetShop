@@ -16,7 +16,7 @@
 
         <nav></nav>
 
-        <button><a href="index.html" >Home</a></button>
+        <button><a href="index.html">Home</a></button>
         <button><a href="sobre.html">Sobre nós</a></button>
         <button><a href="cadastro.html">Cadastro</a></button>
         <button><a href="carrinho.html" id="cart-button">Carrinho (<span id="cart-count">0</span>)</a></button>
@@ -24,26 +24,26 @@
     </header>
 
     <section>
-        <img src="../image/fundo1.jpeg" class="fundo">
+        <!-- <img src="../image/fundo1.jpeg" class="fundo"> -->
 
         <div class="alinhamento">
             <div class="card">
-                <img src="../image/icons/pagamento.png">
+                <img src="../image/icons/pagamento.png" class="icons">
                 <span>Diversos meios de pagamento</span>
             </div>
 
             <div class="card">
-                <img src="../image/icons/protecao.png">
+                <img src="../image/icons/protecao.png" class="icons">
                 <span>Pague com segurança</span>
             </div>
 
             <div class="card">
-                <img src="../image/icons/substituicao.png">
+                <img src="../image/icons/substituicao.png" class="icons">
                 <span>Política de trocas</span>
             </div>
 
             <div class="card">
-                <img src="../image/icons/entrega-rapida.png">
+                <img src="../image/icons/entrega-rapida.png" class="icons">
                 <span>Entrega rápida e segura</span>
             </div>
         </div>
@@ -56,28 +56,35 @@
 
                 <div class="produtos">
                     <div class="produto-item">
-                        <img src="../image/produto1.jfif" alt="Imagem" class="add-car" data-name="Produto 1"
-                            data-price="39,90">
-                        <p>Guia para coleira - R$ 39,90</p>
-                        <button><a href="carrinho.html" class="comprar" data-name="Produto1" data-price="39,90">Comprar</a></button>
+                        <img src="../image/produto1.jfif" alt="Guia" data-name="Guia" data-price="39.90"
+                            data-image="../image/produto1.jfif" class="prod">
+                        <p>Guia Retrátil- R$ 39,90</p>
+                        <button onclick="adicionarProduto('Guia', 39.90, '../image/produto1.jfif')">Adicionar ao
+                            Carrinho</button>
                     </div>
+
                     <div class="produto-item">
-                        <img src="../image/produto2.jfif" alt="Imagem" class="add-car" data-name="Produto 2"
-                            data-price="49,50">
-                        <p>Biscoito - R$ 49,50</p>
-                        <button><a href="carrinho.html" class="comprar" data-name="Produto2" data-price="49,50">Comprar</a></button>
+                        <img src="../image/produto2.jfif" alt="Cookie" data-name="Coockie" data-price="54.90"
+                            data-image="../image/produto-item2.jfif" class="prod">
+                        <p>Cookie Frutas Vermelhas 250g - R$ 54,90</p>
+                        <button onclick="adicionarProduto('Cookie', 54.90, '../image/produto2.jfif')">Adicionar ao
+                            Carrinho</button>
                     </div>
+
                     <div class="produto-item">
-                        <img src="../image/produto3.jfif" alt="Imagem" class="add-car" data-name="Produto 3"
-                            data-price="19,00">
-                        <p>Bolinhas para treino - R$ 19,00</p>
-                        <button><a href="carrinho.html" class="comprar" data-name="Produto3" data-price="19,00">Comprar</a></button>
+                        <img src="../image/produto3.jfif" alt="Bolinhas" data-name="Bolinhas" data-price="9.90"
+                            data-image="../image/produto3.jfif" class="prod">
+                        <p>Bolinhas para treino - R$ 9,90</p>
+                        <button onclick="adicionarProduto('Bolinhas', 9.90, '../image/produto3.jfif')">Adicionar ao
+                            Carrinho</button>
                     </div>
+
                     <div class="produto-item">
-                        <img src="../image/produto4.jpg" alt="Imagem" class="add-car" data-name="Produto 4"
-                            data-price="199,99">
-                        <p>Chaveiro GPS - R$ 199,99</p>
-                        <button><a href="carrinho.html" class="comprar" data-name="Produto4" data-price="199,99">Comprar</a></button>
+                        <img src="../image/produto4.jpg" alt="GPS" data-name="GPS" data-price="199.90"
+                            data-image="../image/produto4.jpg" class="prod">
+                        <p>GPS para Pet - R$ 199,90</p>
+                        <button onclick="adicionarProduto('GPS', 199.90, '../image/produto4.jpg')">Adicionar ao
+                            Carrinho</button>
                     </div>
                 </div>
 
@@ -89,26 +96,28 @@
 
                 <div class="produtos">
                     <div class="produto-item2">
-                        <img src="../image/produto1.jfif" alt="Imagem" class="prod1" data-name="Produto 1"
+                        <img src="../image/produto1.jfif" alt="Imagem" class="prod" data-name="Produto 1"
                             data-price="39,90">
                         <p>Guia para coleira - R$ 39,90</p>
                     </div>
                     <div class="produto-item">
-                        <img src="../image/produto2.jfif" alt="Imagem" class="pro2" data-name="Produto 2"
+                        <img src="../image/produto2.jfif" alt="Imagem" class="prod" data-name="Produto 2"
                             data-price="49,50">
                         <p>Biscoito - R$ 49,50</p>
                     </div>
                     <div class="produto-item">
-                        <img src="../image/produto3.jfif" alt="Imagem" class="prod3" data-name="Produto 3"
+                        <img src="../image/produto3.jfif" alt="Imagem" class="prod" data-name="Produto 3"
                             data-price="19,00">
                         <p>Bolinhas para treino - R$ 19,00</p>
                     </div>
                     <div class="produto-item">
-                        <img src="../image/produto4.jpg" alt="Imagem" class="prod4" data-name="Produto 4"
+                        <img src="../image/produto4.jpg" alt="Imagem" class="prod" data-name="Produto 4"
                             data-price="199,99">
                         <p>Chaveiro GPS - R$ 199,99</p>
                     </div>
                 </div>
+
+
 
                 <div class="alinhamento2">
 
@@ -116,22 +125,22 @@
 
                     <div class="produtos">
                         <div class="produto-item3">
-                            <img src="../image/produto1.jfif" alt="Imagem" class="prod1" data-name="Produto 1"
+                            <img src="../image/produto1.jfif" alt="Imagem" class="prod" data-name="Produto 1"
                                 data-price="39,90">
                             <p>Guia para coleira - R$ 39,90</p>
                         </div>
                         <div class="produto-item">
-                            <img src="../image/produto2.jfif" alt="Imagem" class="pro2" data-name="Produto 2"
+                            <img src="../image/produto2.jfif" alt="Imagem" class="prod" data-name="Produto 2"
                                 data-price="49,50">
                             <p>Biscoito - R$ 49,50</p>
                         </div>
                         <div class="produto-item">
-                            <img src="../image/produto3.jfif" alt="Imagem" class="prod3" data-name="Produto 3"
+                            <img src="../image/produto3.jfif" alt="Imagem" class="prod" data-name="Produto 3"
                                 data-price="19,00">
                             <p>Bolinhas para treino - R$ 19,00</p>
                         </div>
                         <div class="produto-item">
-                            <img src="../image/produto4.jpg" alt="Imagem" class="prod4" data-name="Produto 4"
+                            <img src="../image/produto4.jpg" alt="Imagem" class="prod" data-name="Produto 4"
                                 data-price="199,99">
                             <p>Chaveiro GPS - R$ 199,99</p>
                         </div>
@@ -145,6 +154,7 @@
         </div>
 
     </section>
+    <script src="../javascript/script.js"></script>
 </body>
 
 <section class="section">
