@@ -12,26 +12,33 @@
     <header>
         <img class="banner" src="../image/petshop.jpeg" alt="banner">
         <nav>
-            <button><a  href="produto.html">+ Produtos</a></button>
-            <button><a  id="cart-button">Carrinho (<span id="car-quantidade">0</span>)</a></button>
+            <button><a href="produto.html">+ Produtos</a></button>
         </nav>
     </header>
 
     <section>
-        <img src="../image/fundo1.jpeg" class="fundo">
-        <div class="alinhamento">
-            <h2>MEUS PRODUTOS</h2>
-        </div>
-    </section>
+        <!-- <img src="../image/fundo1.jpeg" class="fundo"> -->
 
-    <section id="car" style="display: none;">
-        <h2>Seu Carrinho</h2>
-        <div id="car-items"></div>
-        <p id="car-total">Total: R$ 0,00</p>
-        <button id="checkout-button">Finalizar Compra</button>
-    </section>
+        <section id="car" style="display: none;">
+            <h2>Seu Carrinho</h2>
+            <div id="car-items"></div>
+            <p id="car-total">Total: R$ 0,00</p>
+            <button id="checkout-button">Finalizar Compra</button>
+        </section>
 
-    <script src="../js/script.js"></script>
+        <section id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho"></ul>
+            <div id="total">
+                <p>Total: R$ <span id="valor-total">0.00</span></p>
+            </div>
+            <div id="botoes-carrinho">
+                <button id="cancelar-compra" onclick="cancelarCompra()" disabled>Cancelar Compra</button>
+                <button onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <script src="../javascript/script.js"></script>
 </body>
 
 <section class="section">
