@@ -1,23 +1,24 @@
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f1f1ee;
+    background-color: #f3f3d2;
 }
 
-.fundo {
+/* .fundo {
     background-image: url(../image/fundo1.jpeg);
     background-position: center;
     background-size: cover;
     /* opacity: 0.5; */
-    position: relative;
-    /* width: 100%;
+
+/* width: 100%;
     height: 100vh;
     position: absolute;
     right: 0px;
     left: 0px;
     z-index: -1;
     opacity: 0.1; */
-}
+
 
 header {
     justify-content: center;
@@ -38,21 +39,26 @@ h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3em;
     margin: 50px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.alinhamento {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 0px;
 }
 
 .card {
-    display: inline-flex;
-    width: 150px;
-    height: 50px;
+    display: flex;
+    width: 200px;
+    height: 35px;
     background: #e2e2e2;
-    padding: 15px 15px 15px 15px;
+    padding: 30px 5px 30px 5px;
     border: 1px solid;
-    box-shadow: 2px 2px 20px 5px #3e9470;
-    margin: 50px 140px;
+    box-shadow: 2px 0px 20px 5px #838282;
     border-radius: 10px;
     text-align: center;
-    font-size: 110%;
-
+    justify-content: space-evenly;
 }
 
 button {
@@ -60,9 +66,8 @@ button {
     color: black;
     border-color: rgb(241, 183, 35);
     border-radius: 50px;
-    display: flexbox;
     width: 200px;
-    margin: 80px 15px;
+    margin: 30px 15px 30px;
     padding: 10px;
     text-decoration: none;
     text-align: center;
@@ -102,6 +107,7 @@ button:active {
 
 .produto-item img {
     width: 60%;
+    padding: 30px 0px 30px;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -111,20 +117,17 @@ button:active {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-/* produtos */
 .alinhamento2 {
     justify-items: center;
 }
 
-
-/* Informações */
 .section {
     width: 100%;
     background-color: #3e9470;
     color: white;
     justify-content: space-around;
     display: flex;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .info1,
@@ -137,6 +140,7 @@ h4 {
     color: #f9b217;
     font-size: 1.5em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 p {
@@ -144,7 +148,6 @@ p {
     text-align: center;
 }
 
-/* Rodapé */
 footer {
     background-color: #0a1a2a;
     text-align: center;
@@ -157,21 +160,97 @@ footer p {
     color: #3e9470
 }
 
-/* Adicionando responsividade */
-@media (max-width: 768px) {
-    section {
+@media (max-width: 320px) {
+
+
+    h2 {
+        font-size: 1.5em;
+        margin: 20px 10px;
+    }
+
+
+    .alinhamento,
+    .card {
         flex-direction: column;
-        padding: 20px;
+        justify-content: space-evenly;
+        flex: 2 2;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 10px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .produtos {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .produto-item {
+        display: inline-block;
+        border-radius: 5px;
+        width: 80px;
+    }
+
+    button {
+        width: 90%;
+        margin: 5px auto;
     }
 
     .info1,
     .info2 {
-        margin-right: 0;
-        margin-bottom: 20px;
+        flex: 1 1 100%;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .produtos {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .button {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .produto-item {
+        flex: 1 1 45%;
+
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .produtos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .produto-item {
+        flex: 1 1 22%;
+    }
+
+    button {
+        width: 200px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
     }
 }
