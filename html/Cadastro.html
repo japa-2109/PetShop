@@ -10,13 +10,14 @@
 </head>
 
 <body>
-    <img src="../image/fundo1.jpeg" class="fundo">
+    <!-- <img src="../image/fundo1.jpeg" class="fundo"> -->
 
     <div class="container">
         <img src="../image/logo.jpeg" class="logo">
         <h2>Dados pessoais</h2>
 
-        <form action="cadastro" class="forms">
+        <form id="cadastroForm" class="forms">
+
 
             <label>Nome:</label>
             <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br>
@@ -27,12 +28,17 @@
             <label>Idade:</label>
             <input type="number" id="idade" name="idade" placeholder="Idade" required min="18" max="150"><br>
 
-            <label for="sexo" class="sx">Sexo:</label>
-            <select id="sexo" name="sexo" required>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="todes">Todes</option>
-            </select><br>
+            <label for="sexo">Sexo:</label>
+            <div class="sexo-options">
+                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                <label for="masculino" class="sx">Masculino</label>
+
+                <input type="radio" id="feminino" name="sexo" value="feminino">
+                <label for="feminino" class="sx">Feminino</label>
+
+                <input type="radio" id="todes" name="sexo" value="todes">
+                <label for="todes" class="sx">Todes</label>
+            </div><br>
 
             <label>Documento:</label>
             <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF ou RG" required><br>
@@ -52,10 +58,11 @@
             <label>Estado:</label>
             <input type="text" id="est" name="estado" placeholder="Digite seu Estado" required><br>
 
-            <button><a href="index.html" type="submit" class="enviar">Enviar</a></button>
+            <button type="button" id="enviar" class="enviar">Enviar</button>
 
         </form>
     </div>
+    <script src="../javascript/cadastro.js"></script>
 </body>
 
 </html>
